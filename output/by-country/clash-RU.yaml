@@ -5,12 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
-  type: ss
-  server: 138.124.68.88
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: Y2ZlN
+  type: vless
+  server: 188.114.97.6
+  port: 2086
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 - name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   type: ss
   server: 130.49.189.158
