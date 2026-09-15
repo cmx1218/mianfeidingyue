@@ -1,0 +1,81 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇸🇨 SC 01 - xiaohe
+  type: vless
+  server: 104.21.238.93
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-44890b90d17e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: afzoybehu2ws.vtzv4xe1un6s.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/44890b90d17e/loc-0
+    headers:
+      Host: afzoybehu2ws.vtzv4xe1un6s.workers.dev
+- name: 🇸🇨 SC 02 - xiaohe
+  type: vless
+  server: 104.21.14.116
+  port: 443
+  uuid: 566c0473-382e-aabb-c62a-f5bb00000000
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: ez-4b5fd4.appelidmymat.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: ez-4b5fd4.appelidmymat.workers.dev
+- name: 🇸🇨 SC 03 - xiaohe
+  type: vless
+  server: 172.67.152.71
+  port: 8880
+  uuid: ed189537-41de-4abe-9f8b-bb75d457722d
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /pyip=ProxyIP.US.CMLiussss.net
+    headers:
+      Host: lucky-cake-4f58.318-5ee.workers.dev
+- name: 🇸🇨 SC 04 - xiaohe
+  type: vless
+  server: 104.21.238.93
+  port: 443
+  uuid: 50414e45-4c5f-5a45-5553-44890b90d17e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: afzoybehu2ws.vtzv4xe1un6s.workers.dev
+  network: ws
+  ws-opts:
+    path: /stream/PANEL_ZEUS/44890b90d17e/loc-0
+    headers:
+      Host: afzoybehu2ws.vtzv4xe1un6s.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇸🇨 SC 01 - xiaohe
+  - 🇸🇨 SC 02 - xiaohe
+  - 🇸🇨 SC 03 - xiaohe
+  - 🇸🇨 SC 04 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇸🇨 SC 01 - xiaohe
+  - 🇸🇨 SC 02 - xiaohe
+  - 🇸🇨 SC 03 - xiaohe
+  - 🇸🇨 SC 04 - xiaohe
+rules:
+- MATCH,PROXIES
