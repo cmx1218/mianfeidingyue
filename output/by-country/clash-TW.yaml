@@ -6,7 +6,7 @@ log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 - xiaohe
   type: vmess
-  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
   port: 443
   uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   alterId: 0
@@ -14,12 +14,12 @@ proxies:
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+  servername: ''
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
+      Host: ''
 - name: 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   type: vmess
   server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
@@ -54,7 +54,7 @@ proxies:
       Host: ''
 - name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   type: vmess
-  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  server: dee2309db4se3g5s1d65g672c6641e25.oylfmxz.cn
   port: 443
   uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
   alterId: 0
@@ -65,10 +65,26 @@ proxies:
   servername: ''
   network: ws
   ws-opts:
-    path: ''
+    path: /
     headers:
       Host: ''
 - name: 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
+  type: vmess
+  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  port: 443
+  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
+  alterId: 0
+  cipher: auto
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
+- name: 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
   type: vless
   server: 60.248.219.52
   port: 443
@@ -82,22 +98,6 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- name: 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
-  type: vmess
-  server: dee2309db4944c248b6d4672c6641e25.oylfmxz.cn
-  port: 443
-  uuid: d90e4077-bc7e-414d-a650-70bf1baae4d6
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: ''
-  network: ws
-  ws-opts:
-    path: ''
-    headers:
-      Host: ''
 - name: 🇹🇼 中国台湾 (Taiwan) 07 - xiaohe
   type: vmess
   server: 165.154.195.38
